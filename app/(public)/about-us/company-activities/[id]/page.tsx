@@ -5,7 +5,8 @@ import BlogCard from "@/components/BlogCard";
 import { all_blog_data } from "@/data/raw_data";
 import HeaderBreadcrums from "@/components/layout/Header_Breadcrumbs";
 
-export default function ActivityDetail({ params }: { params: { id: string | string[] } }) {
+export default function ActivityDetail(props: unknown) {
+  const { params } = props as { params: { id: string | string[] } };
   const idParam = params.id;
   const id = Array.isArray(idParam) ? idParam[0] : idParam;
   const activity = all_blog_data.find((a) => a.id === Number(id));
