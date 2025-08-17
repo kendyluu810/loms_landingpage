@@ -4,7 +4,6 @@ import { useParams, useSearchParams, useRouter } from "next/navigation";
 import { all_blog_data } from "@/data/raw_data";
 import BlogCard from "@/components/BlogCard";
 import BreadcrumbMenu from "@/components/BreadcrumbMenu";
-import Image from "next/image";
 import { useEffect } from "react";
 import HeaderBreadcrums from "@/components/layout/Header_Breadcrumbs";
 
@@ -15,6 +14,10 @@ export default function NewsCategoryPage() {
 
   const currentPage = Number(searchParams.get("page")) || 1;
   const perPage = 6;
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [currentPage]);
 
   if (!category) {
     return <div>Loading...</div>;
@@ -30,10 +33,6 @@ export default function NewsCategoryPage() {
   const totalPages = Math.ceil(filteredData.length / perPage);
   const startIndex = (currentPage - 1) * perPage;
   const paginatedData = filteredData.slice(startIndex, startIndex + perPage);
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [currentPage]);
 
   // Nếu không tìm thấy dữ liệu
   if (filteredData.length === 0) {

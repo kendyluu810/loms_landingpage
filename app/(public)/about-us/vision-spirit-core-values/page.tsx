@@ -125,7 +125,7 @@ export default function VSCPage() {
         <h2 className="text-5xl font-bold text-green-500">Core Values</h2>
         <p className="text-lg font-medium">
           At King Freight Logistics Vietnam, we always strive towards our core
-          values "KFLV"
+          values &quot;KFLV&quot;
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-5">
           {cards.map((card, index) => (
