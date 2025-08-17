@@ -5,8 +5,10 @@ import BlogCard from "@/components/BlogCard";
 import { all_blog_data } from "@/data/raw_data";
 import HeaderBreadcrums from "@/components/layout/Header_Breadcrumbs";
 
-export default function NewsDetails({ params }: { params: { id: string } }) {
-  const { id } = params;
+export default function NewsDetails(props: unknown) {
+  const { params } = props as { params: { id: string | string[] } };
+  const idParam = params.id;
+  const id = Array.isArray(idParam) ? idParam[0] : idParam;
   const news = all_blog_data.find((a) => a.id === Number(id));
   if (!news) return notFound();
 
