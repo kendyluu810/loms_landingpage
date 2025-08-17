@@ -5,10 +5,7 @@ import BlogCard from "@/components/BlogCard";
 import { all_blog_data } from "@/data/raw_data";
 import HeaderBreadcrums from "@/components/layout/Header_Breadcrumbs";
 
-type PageProps = {
-  params: { id: string };
-};
-export default function ActivityDetail({ params }: PageProps) {
+export default function ActivityDetail({ params }: any) {
   const { id } = params;
   const activity = all_blog_data.find((a) => a.id === Number(id));
   if (!activity) return notFound();
