@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "supports",
+  "info": {
+    "singularName": "support",
+    "pluralName": "supports",
+    "displayName": "support"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fullname": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "transportation": {
+      "type": "enumeration",
+      "enum": [
+        "Sea",
+        "Air",
+        "Land"
+      ]
+    },
+    "typeOfShipment": {
+      "type": "enumeration",
+      "enum": [
+        "FCL",
+        "LCL"
+      ]
+    },
+    "containerType": {
+      "type": "enumeration",
+      "enum": [
+        "container20ft",
+        "container40ft"
+      ]
+    },
+    "containerNumber": {
+      "type": "string"
+    },
+    "weight": {
+      "type": "string"
+    },
+    "origin": {
+      "type": "string"
+    },
+    "destination": {
+      "type": "string"
+    },
+    "departureETA": {
+      "type": "datetime"
+    },
+    "typeOfGoods": {
+      "type": "string"
+    },
+    "otherInformation": {
+      "type": "blocks"
+    }
+  }
+}

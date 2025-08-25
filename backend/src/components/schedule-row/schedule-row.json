@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_schedule_row_schedule_rows",
+  "info": {
+    "displayName": "schedule-row"
+  },
+  "options": {},
+  "attributes": {
+    "vesselName": {
+      "type": "string"
+    },
+    "voyageNo": {
+      "type": "string"
+    },
+    "cutOffSI": {
+      "type": "date"
+    },
+    "cutOffCargo": {
+      "type": "date"
+    },
+    "etd": {
+      "type": "date"
+    },
+    "eta": {
+      "type": "date"
+    }
+  },
+  "config": {}
+}

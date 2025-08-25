@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "schedules",
+  "info": {
+    "singularName": "schedule",
+    "pluralName": "schedules",
+    "displayName": "schedule"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "air",
+        "ocean"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "month": {
+      "type": "string"
+    },
+    "rows": {
+      "type": "component",
+      "component": "schedule-row.schedule-row",
+      "repeatable": true
+    },
+    "note": {
+      "type": "blocks"
+    }
+  }
+}
